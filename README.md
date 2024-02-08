@@ -17,6 +17,9 @@ cat domains.txt | grep -Eo '[a-zA-Z0-9_-]+\.domain\.com' | sort -u | tee finaldo
 
 #sorting out everthing
 cat finaldomains.txt | httprobe -prefer-https > alive_domains.txt
+cat alive_domains.txt | httpx -status-code | tee finale.txt
+
+grep -vE '400|401|402|403|404' finale.txt
 
 #live view
 mkdir domainpics
