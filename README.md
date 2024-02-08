@@ -50,5 +50,9 @@ cat way.txt | grep "=" | sort -u
 
 echo "https://domain.com" | gau > gau.txt && echo "https://domain.com" | waybackurls > way.txt && cat gau.txt way.txt | sort -u > sorted.txt
 
+python3 paramspider -d hackerone.com
+
+arjun -u https://hackerone.com
+
 katana -u "https://domain.com" -jc -d 4 -o katana.txt
 ```
