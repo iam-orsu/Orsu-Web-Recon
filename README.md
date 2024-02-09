@@ -41,6 +41,17 @@ dirb http://10.0.0.10
 
 # can use other tools as well like dirbuster and gobuster
 ```
+#Port Scanning
+```bash
+#Finding Origin IP address
+clone this repo https://github.com/christophetd/CloudFlair.git
+go through search.censys.io and signup and login cenysys search
+go through API section and export through API from github cloudflare repo
+export CENSYS_API_ID=
+export CENSYS_API_SECRET=
+python3 cloudflair.py domain.com
+# ANother way to get origin IP is going through securitytrails.com/domain
+```
 
 # Content Discovery
 
