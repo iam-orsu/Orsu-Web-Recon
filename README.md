@@ -13,7 +13,7 @@ subfinder -d domain.com -o domains.txt
 #configure your own api key like security trails copy that particular one
 #add api key
 amass enum -d domain.com >> domians.txt
-cat domains.txt | grep -Eo '[a-zA-Z0-9_-]+\.domain\.com' | sort -u | tee finaldomains.txt
+cat domains.txt | grep -Eo ([a-zA-Z0-9_-]+\.)+[a-zA-Z0-9_-]+\.example\.com | sort -u | tee finaldomains.txt
 
 #sorting out everthing
 cat finaldomains.txt | httprobe -prefer-https > alive_domains.txt
